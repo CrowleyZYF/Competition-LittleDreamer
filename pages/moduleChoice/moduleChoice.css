@@ -1,0 +1,92 @@
+﻿.moduleChoice {  
+    height:100%;
+    width:100%;
+    background:url("../../images/frame/moduleChoiceBG.png") no-repeat;
+    background-size:1366px 768px;
+    background-position:center;
+}
+
+#diy {
+    display:block;
+    background:url(../../images/frame/diy.png) no-repeat;
+    background-size:241px 170px;
+    height:170px;
+    width:241px;
+    position:absolute;
+    top:0;
+    left:35px;
+}
+
+    #diy:hover {
+        background:url(../../images/frame/diyPress.png) no-repeat;
+        background-size:241px 170px;
+    }
+
+#moduleOne {
+    display:block;
+    background:url(../../images/frame/moduleOne.png) no-repeat;
+    background-size:173px 157px;
+    height:157px;
+    width:173px;
+    position:absolute;
+    top:278px;
+    left:125px;
+}
+
+.moduleOneAnimation {
+    animation: rotateOneAnimation 0.6s ease-in forwards;
+}
+
+#moduleTwo {
+    display:block;
+    background:url(../../images/frame/moduleTwo.png) no-repeat;
+    background-size:203px 165px;
+    height:165px;
+    width:203px;
+    position:absolute;
+    top:335px;
+    left:715px;
+}
+
+.moduleTwoAnimation {
+    animation: rotateTwoAnimation 0.6s ease-in forwards;
+}
+    
+#moduleThree {
+    display:block;
+    background:url(../../images/frame/moduleThree.png) no-repeat;
+    background-size:165px 149px;
+    height:149px;
+    width:165px;
+    position:absolute;
+    top:240px;
+    left:1095px;
+}
+
+.moduleThreeAnimation {
+    animation: rotateThreeAnimation 0.6s ease-in forwards;
+}
+
+@keyframes rotateOneAnimation { 
+	0% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:94px 7px;}
+	25% { transform: translateY(0%) rotate(-15deg); animation-timing-function: linear;transform-origin:94px 7px;}
+	50% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:94px 7px;}
+	75% { transform: translateY(0%) rotate(15deg); animation-timing-function: linear;transform-origin:94px 7px;}
+    100% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:94px 7px;}
+}
+
+@keyframes rotateTwoAnimation { 
+	0% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:57px 160px;}
+	25% { transform: translateY(0%) rotate(-10deg); animation-timing-function: linear;transform-origin:57px 160px;}
+	50% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:57px 160px;}
+	75% { transform: translateY(0%) rotate(10deg); animation-timing-function: linear;transform-origin:57px 160px;}
+    100% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:57px 160px;}
+}
+
+@keyframes rotateThreeAnimation { 
+	0% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:99px 1px;}
+	25% { transform: translateY(0%) rotate(-15deg); animation-timing-function: linear;transform-origin:99px 1px;}
+	50% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:99px 1px;}
+	75% { transform: translateY(0%) rotate(15deg); animation-timing-function: linear;transform-origin:99px 1px;}
+    100% { transform: translateY(0%) rotate(0deg); animation-timing-function: linear;transform-origin:99px 1px;}
+}

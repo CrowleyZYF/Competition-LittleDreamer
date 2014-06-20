@@ -1,0 +1,488 @@
+﻿.game {
+    width:100%;
+    height:100%;
+}
+ul.solarsystem li.mercury {animation-duration:5s;}
+ul.solarsystem li.venus {animation-duration:8s;}
+ul.solarsystem li.earth {animation-duration:12s;}
+ul.solarsystem li.earth span {animation-duration:2s;}
+ul.solarsystem li.mars {animation-duration:20s;}
+ul.solarsystem li.asteroids_meteorids {animation-duration:50s;}
+ul.solarsystem li.jupiter {animation-duration:30s;}
+ul.solarsystem li.saturn {animation-duration:60s;}
+ul.solarsystem li.uranus {animation-duration:70s;}
+ul.solarsystem li.neptune {animation-duration:100s;}
+ul.solarsystem li.pluto {animation-duration:120s;}
+@keyframes orbit { from { transform:rotate(0deg) } to { transform:rotate(360deg) } }
+@keyframes moon { from { transform:rotate(0deg) } to { transform:rotate(360deg) } }
+    
+/* moduleJZ */
+/* JZ01 */
+#ready {
+    height:768px;
+    width:1366px;
+    background:url("../../images/JZ01/a200.png") no-repeat;
+    background-size:100% 100% !important;
+    background-position:center;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    display:none;
+}
+
+.JZ01game {
+    height:100%;
+    width:100%;
+    background:url("../../images/JZ01/JZ01BG.png") no-repeat;
+    /* background:url("../../images/JZ01/JZ01BG2.png") no-repeat; */
+    background-size:100% 100% !important;
+    background-position:center;
+}
+
+#JZ01Repeat {
+    width:75px;
+    height:80px;
+    position:absolute;
+    left:1175px;
+    top:14px;
+}
+
+#JZ01Music {
+    width:75px;
+    height:80px;
+    position:absolute;
+    left:1260px;
+    top:14px;
+}
+
+#JZ01GameContent{
+    width:1366px;
+    height:675px;
+    position:absolute;
+    top:93px;
+}
+
+#JZ01StageOne {
+    width:100%;
+    height:100%;
+}
+
+.JZ01Arrow {
+    width:130px;
+    height:109px;
+}
+
+#JZ01ArrowLeft {
+    position:absolute;
+    top:235px;
+    left:100px;
+}
+
+#JZ01ArrowRight {
+    position:absolute;
+    top:235px;
+    left:1174px;
+}
+
+.JZ01card {
+    position:absolute;
+    background:url("../../images/JZ01/stageOneCard.png") no-repeat;
+    background-position:center;
+    background-size:100% 100%;
+}
+
+    .JZ01card img {
+        padding:40px 60px 0 60px;
+        width:380px;
+        height:350px;
+    }    
+
+    .JZ01card p {
+        font-size:15px;
+        text-align:center;
+        color:#f65d39;
+        font-weight:bold;
+        padding:0;
+        margin:0;
+    }
+
+    .JZ01card p:last-child {
+        font-size:30px;
+    }
+
+.JZ01left {
+    width:398px;
+    height:445px;    
+    left:230px;
+    top:75px;
+    z-index:50;
+}
+
+.JZ01current {
+    width:470px;
+    height:525px;
+    top:30px;
+    left:452px;
+    z-index:100;
+}
+
+    .JZ01current img {
+            padding:50px 70px 0 70px;
+            width:460px;
+            height:400px;
+    }
+
+    .JZ01current p {
+        font-size:25px;
+    }
+
+    .JZ01current p:last-child {
+        font-size:40px;
+    }
+
+.JZ01right {
+    width:398px;
+    height:445px;
+    left:750px;
+    top:75px;
+    z-index:50;
+}
+
+.JZ01none {
+    width:398px;
+    height:445px;
+    top:75px;
+    left:490px;
+    z-index:0;
+}
+
+#nextStage {
+    width:225px;
+    height:90px;
+    position:absolute;
+    left:1115px;
+    top:560px;
+}
+
+.JZ01cardHidden{
+    display:none;
+}
+
+#JZ01fourCard {
+    width:1326px;
+    margin:105px 20px 0 20px;
+    height:340px;
+    display:-ms-grid;
+    -ms-grid-columns:1fr 1fr 1fr 1fr;
+    -ms-grid-rows:1fr;
+}
+
+.JZ01fourCards {
+    width:320px;
+    height:370px;
+    background:url("../../images/JZ01/stageTwoCard.png") no-repeat;
+    background-size:100% 100%;
+    -ms-grid-column-align:center;
+    -ms-grid-row-align:center;
+}
+
+    .JZ01fourCards img {
+        width:220px;
+        height:255px;
+        margin:30px 50px 0px 50px;    
+    }
+
+    .JZ01fourCards p {
+        font-size:17px;
+        text-align:center;
+        color:#f65d39;
+        font-weight:bold;
+        padding:0;
+        margin:0;
+    }
+
+.fourCardChinese {
+    font-size:28px !important;
+}
+
+#JZ01card1{
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+}
+
+#JZ01card2{
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+}
+
+#JZ01card3{
+    -ms-grid-column:3;
+    -ms-grid-row:1;
+}
+
+#JZ01card4{
+    -ms-grid-column:4;
+    -ms-grid-row:1;
+}
+
+#JZ01girl {
+    width:133px;
+    height:168px;
+    margin-left:600px;
+    margin-top:20px;
+}
+
+.JZ01tickDiv {
+    width:0;
+    height:100px;
+    position:relative;
+    top:-70px;
+    left:220px;
+}
+
+.JZ01tickDiv img{
+    width:100px;
+    height:100px;
+    margin:0;
+}
+
+#JZ01gameFinish{
+    width:1366px;
+    height:768px;
+    background:url("../../images/JZ01/JZ01gameFinishBG.png") no-repeat;
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+#JZ01gameFinishTitle{
+    width:415px;
+    height:160px;
+    position:absolute;
+    top:30px;
+    left:475px;
+}
+
+#JZ01missionControl{
+    width:500px;
+    height:220px;
+    position:absolute;
+    top:500px;
+    left:433px;
+    display:-ms-grid;
+    -ms-grid-columns:1fr 1fr 1fr;
+    -ms-grid-rows:1fr;
+}
+
+#JZ01missionControl div{
+    width:100px;
+    height:95px;
+    background-size:100% 100% !important;
+    -ms-grid-column-align:center;
+    -ms-grid-row-align:center;
+}
+
+#JZ01missionControl div:hover{
+    cursor:pointer;
+}
+
+#backtoMission{
+    background:url('../../images/JZ01/JZ01list.png') no-repeat;
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+}
+
+#backtoMission:hover{
+    background:url('../../images/JZ01/JZ01listPress.png') no-repeat;
+}
+
+#replay{
+    background:url('../../images/JZ01/JZ01replay.png') no-repeat;
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+}
+
+#replay:hover{
+    background:url('../../images/JZ01/JZ01replayPress.png') no-repeat;
+}
+
+#nextMission{
+    background:url('../../images/JZ01/JZ01next.png') no-repeat;
+    -ms-grid-column:3;
+    -ms-grid-row:1;
+}
+
+#nextMission:hover{
+    background:url('../../images/JZ01/JZ01nextPress.png') no-repeat;
+}
+
+#JZ01starControl {
+    width:660px;
+    height:220px;
+    position:absolute;
+    top:210px;
+    left:353px;
+    display:-ms-grid;
+    -ms-grid-columns:1fr 1fr 1fr;
+    -ms-grid-rows:1fr;
+}
+
+#JZ01starControl>div{
+    width:220px;
+    height:250px;
+    background-size:220px 230px;
+}
+
+#JZ01starControl>div>div{
+    width:220px;
+    height:250px;
+    background-size:220px 230px;
+}
+
+.JZ01starEmpty{    
+    background:url('../../images/JZ01/JZ01starEmpty.png') no-repeat;
+}
+
+.JZ01star{
+    background:url('../../images/JZ01/JZ01star.png') no-repeat;
+    opacity:0;  
+}
+
+#star1{
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+}
+
+#star1>div{ 
+    animation:JZ01star 700ms;
+    animation-timing-function: linear;
+    animation-delay:500ms;
+}
+
+#star2{
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+    -ms-grid-row-align:end;
+}
+
+#star2>div{ 
+    animation:JZ01star 700ms;
+    animation-timing-function: linear;
+    animation-delay:1000ms;
+}
+
+#star3{
+    -ms-grid-column:3;
+    -ms-grid-row:1;
+}
+
+#star3>div{ 
+    animation:JZ01star 700ms;
+    animation-timing-function: linear;
+    animation-delay:1500ms;
+}
+
+@keyframes JZ01star{
+    0% { transform:scale(0,0);opacity:0;}
+	50% { transform:scale(0.5,0.5);opacity:1.0; }
+	100% { transform:scale(1.0,1.0);opacity:1.0; }
+}
+
+.JZ01tips{
+    background:url("../../images/JZ01/JZ01tip.png") no-repeat;
+    width:56px;
+    height:84px;
+    background-size:100% 100%;
+    position:relative;
+    top:-60px;
+    left:240px;
+    animation:JZ01tips 1000ms 3;
+}
+
+@keyframes JZ01tips{
+    0% { opacity:1.0;}
+	50% { opacity:0.1; }
+	100% { opacity:1.0; }
+}
+
+/* stage2 Animation */
+.fallOut {
+    animation: fallDown 0.6s forwards;
+}
+
+.fallIn {
+    animation: scaleUpFadeIn 0.6s forwards;
+}
+
+.slideOut {
+    z-index: 100;
+	overflow: hidden;    
+	margin: 0;
+	animation: slideOut 0.5s forwards;
+}
+
+.slideIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fallRotateOut {
+    z-index: 10;
+	transform-origin: 0 0;
+	animation: fallRotate 0.6s ease-in forwards;
+}
+
+.fallRotateIn {
+	opacity: 0;
+	animation: fadeIn 0.6s forwards;
+}
+
+.scaleRotateOut {
+	animation: scaleRotateOut 0.6s forwards;
+}
+
+.scaleRotateIn {    
+	opacity: 0;
+	animation: scaleRotateIn 0.6s forwards;
+}
+
+.StackOut {
+    animation: moveLeft 0.8s forwards;
+}
+
+.StackIn {
+    z-index: -1;
+	animation: popUp 0.8s ease-in forwards;
+}
+
+.flipOut { 
+	transform-origin: 0% 50%;
+	animation: rotateOutLeft 0.6s forwards;
+}
+
+.flipIn {    
+	opacity: 0;
+	transform-origin: 100% 50%;
+	animation: rotateInRight 0.6s ease-in forwards;
+}
+
+.superscaleOut {
+	animation: scaleDown 0.6s ease-in-out forwards;    
+}
+
+.superscaleIn {    	
+	opacity: 0;
+	animation: scaleIn 0.6s ease-in-out forwards;
+}
+
+.centerFlipOut {
+	animation: flipOut 0.8s ease-in forwards;
+}
+
+.centerFlipIn {
+	opacity: 0;
+	animation: flipIn 0.8s ease-in forwards;
+}
+

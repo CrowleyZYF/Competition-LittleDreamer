@@ -1,0 +1,229 @@
+﻿.mission{
+    height:100%;
+    width:100%;
+    background:url("../../images/frame/JZ01MissionBG.png") no-repeat;
+    background-size:1366px 768px;
+    background-position:center;
+}
+
+#missionLV {
+    display:block;
+    position:absolute;
+    width:120px;
+    height:85px;
+    left:300px;
+    top:35px;
+}
+
+#missionLVNumber {
+    position:absolute;
+    top:30px;
+    left:420px;
+    width:91px;
+    height:101px;
+    font-size:40px;
+    font-family:myEnglish;
+    font-weight:900;
+    color:#044368;
+}
+
+#moduleJZP {
+    display:block;
+    position:absolute;
+    width:801px;
+    height:154px;
+    left:300px;
+    top:15px;
+}
+
+#theRealP {
+    position:absolute;
+    width:600px;
+    height:23px;
+    left:305px;
+    top:133px;
+    background-color:#c49b83;
+    z-index:200;
+    border-radius:20px;
+}
+
+#missionChoice {
+    position:absolute;
+    width:800px;
+    height:484px;
+    top:180px;
+    left:290px;
+    display:-ms-grid;
+    -ms-grid-columns:1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows:1fr 1fr 1fr;
+}
+
+.missionsPass {
+    background:url(../../images/frame/mission.png) no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:128px;
+    height:86px;
+    -ms-grid-column-align:center;
+    -ms-grid-row-align:center;
+}
+
+    .missionsPass:hover {
+        background:url(../../images/frame/missionPress.png) no-repeat;
+        background-size:100% 100%;
+    }
+
+.missionNotPass {
+    background:url(../../images/frame/missionNotPass.png) no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:128px;
+    height:86px;
+    -ms-grid-column-align:center;
+    -ms-grid-row-align:center;
+}
+    .missionNotPass p {
+        color:#afafaf;
+    }
+
+.missionNumber {
+    font-size:30px;
+    padding-top:20px;
+    font-family:myEnglish;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:0;
+}
+
+.stars {
+    margin-left:15px;
+    width:150px;
+    position:relative;
+    left:-20px;
+    top:-10px;
+}
+
+.stars div {
+    float:left;
+}
+
+.star {
+    background:url(../../images/frame/star.png) no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:46px;
+    height:46px;
+}
+
+.emptyStar {
+    background:url(../../images/frame/emptyStar.png) no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:46px;
+    height:46px;
+}
+
+#mission1 {
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+}
+
+#mission2 {
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+}
+
+#mission3 {
+    -ms-grid-column:3;
+    -ms-grid-row:1;
+}
+
+#mission4 {
+    -ms-grid-column:4;
+    -ms-grid-row:1;
+}
+
+#mission5 {
+    -ms-grid-column:5;
+    -ms-grid-row:1;
+}
+
+#mission6 {
+    -ms-grid-column:1;
+    -ms-grid-row:2;
+}
+
+#mission7 {
+    -ms-grid-column:2;
+    -ms-grid-row:2;
+}
+
+#mission8 {
+    -ms-grid-column:3;
+    -ms-grid-row:2;
+}
+
+#mission9 {
+    -ms-grid-column:4;
+    -ms-grid-row:2;
+}
+
+#mission10 {
+    -ms-grid-column:5;
+    -ms-grid-row:2;
+}
+
+#mission11 {
+    -ms-grid-column:1;
+    -ms-grid-row:3;
+}
+
+#mission12 {
+    -ms-grid-column:2;
+    -ms-grid-row:3;
+}
+
+#mission13 {
+    -ms-grid-column:3;
+    -ms-grid-row:3;
+}
+
+#mission14 {
+    -ms-grid-column:4;
+    -ms-grid-row:3;
+}
+
+#mission15 {
+    -ms-grid-column:5;
+    -ms-grid-row:3;
+}
+
+.missionChoice{
+    width:57px;
+    height:37px;
+    position:absolute;
+}
+
+#prev{
+    background:url("../../images/frame/missionPrev.png");
+    background-size:100% 100%;
+    top:300px;
+    left:130px;
+}
+
+#prev:hover{
+    background:url("../../images/frame/missionPrevPress.png");
+    background-size:100% 100%;
+}
+
+#next{
+    background:url("../../images/frame/missionNext.png");
+    background-size:100% 100%;
+    top:350px;
+    left:180px;
+}
+
+#next:hover{
+    background:url("../../images/frame/missionNextPress.png");
+    background-size:100% 100%;
+}

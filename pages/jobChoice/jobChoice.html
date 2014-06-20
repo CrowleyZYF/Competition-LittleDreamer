@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>jobChoice</title>
+
+    <!-- WinJS 引用 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="jobChoice.css" rel="stylesheet" />
+    <script src="jobChoice.js"></script>
+</head>
+<body>
+    <div class="jobChoice fragment">         
+        <a id="return" draggable="false" href="/pages/moduleChoice/moduleChoice.html"></a>
+        <div id="jobChoice">
+            <div id="job1" class="jobs jobComplete" data-id="MZB">
+                <img src="../../images/frame/painter.png" class="jobImg" />
+                <p class="jobName">小小美术家</p>
+                <p class="jobLV">LV <span id="MZBLV">1</span></p>
+            </div>
+            <div id="job2" class="jobs jobComplete" data-id="MZH">
+                <img src="../../images/frame/otherJob.png" class="jobImg" />
+                <p class="jobName">小小天文家</p>
+                <p class="jobLV">LV <span id="MZBLV">1</span></p>
+            </div>
+            <div id="job3" class="jobs jobNotComplete">
+                <img src="../../images/frame/otherJob.png" class="jobImg" />
+                <p class="jobName">敬请</p>
+                <p class="jobLV">期待</p>
+            </div>
+            <div id="job4" class="jobs jobNotComplete">
+                <img src="../../images/frame/otherJob.png" class="jobImg" />
+                <p class="jobName">敬请</p>
+                <p class="jobLV">期待</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

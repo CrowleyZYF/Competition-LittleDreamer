@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>LittleDreamer</title>
+
+    <!-- WinJS 引用 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- LittleDreamer 引用 -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="/js/jQuery.js"></script>
+    <script src="/js/extendedSplash.js"></script>
+    <script src="/js/initLocalSetting.js"></script>    
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/gameFunction.js"></script>
+    <script src="/js/gameInit.js"></script>    
+    
+</head>
+<body>
+    <div id="extendedSplashScreen" class="extendedSplashScreen hidden">
+        <img id="extendedSplashImage" src="/images/splashscreen.png" alt="Splash screen image" onload=""/>
+    </div>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+    <audio id="effectAudio">
+        <source id="effectAudioSource" src="../../other/sound/JZ01/4.wma" />
+    </audio>
+    <audio id="backAudio" loop="loop">
+        <source id="backAudioSource" src="../../audio/normal/backMusic.mp3" />
+    </audio>
+    <canvas id="gameCanvas" width="1366" height="768"></canvas>
+    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+    </div> -->
+    <!--cocos2D 导入-->
+    <script src="/js/cocos2d/core/platform/CCClass.js"></script>
+    <script src="/js/cocos2d/core/cocoa/CCGeometry.js"></script>
+    <script src="/js/cocos2d/core/platform/Sys.js"></script>
+    <script src="/js/cocos2d/core/platform/CCConfig.js"></script>
+    <script src="/js/cocos2d/core/platform/miniFramework.js"></script>
+
+    <script src="/js/cocos2d/core/platform/CCCommon.js"></script>
+    <script src="/js/cocos2d/core/platform/CCMacro.js"></script>
+    <script src="/js/cocos2d/core/platform/CCFileUtils.js"></script>
+    <script src="/js/cocos2d/core/platform/CCTypes.js"></script>
+    <script src="/js/cocos2d/core/platform/CCEGLView.js"></script>
+
+    <script src="/js/cocos2d/core/platform/CCScreen.js"></script>
+    <script src="/js/cocos2d/core/platform/CCVisibleRect.js"></script>
+    <script src="/js/cocos2d/core/cocoa/CCNS.js"></script>
+    <script src="/js/cocos2d/core/cocoa/CCAffineTransform.js"></script>
+    <script src="/js/cocos2d/core/support/CCPointExtension.js"></script>
+
+    <script src="/js/cocos2d/core/support/CCVertex.js"></script>
+    <script src="/js/cocos2d/core/support/TransformUtils.js"></script>
+    <script src="/js/cocos2d/core/base_nodes/CCNode.js"></script>
+    <script src="/js/cocos2d/core/base_nodes/CCAtlasNode.js"></script>
+    <script src="/js/cocos2d/core/textures/CCTexture2D.js"></script>
+
+    <script src="/js/cocos2d/core/textures/CCTextureCache.js"></script>
+    <script src="/js/cocos2d/core/textures/CCTextureAtlas.js"></script>
+    <script src="/js/cocos2d/core/scenes_nodes/CCScene.js"></script>
+    <script src="/js/cocos2d/core/layers_nodes/CCLayer.js"></script>
+    <script src="/js/cocos2d/core/sprite_nodes/CCSprite.js"></script>
+
+    <script src="/js/cocos2d/core/sprite_nodes/CCAnimation.js"></script>
+    <script src="/js/cocos2d/core/sprite_nodes/CCAnimationCache.js"></script>
+    <script src="/js/cocos2d/core/sprite_nodes/CCSpriteFrame.js"></script>
+    <script src="/js/cocos2d/core/sprite_nodes/CCSpriteFrameCache.js"></script>
+    <script src="/js/cocos2d/core/sprite_nodes/CCSpriteBatchNode.js"></script>
+
+    <script src="/js/cocos2d/core/CCConfiguration.js"></script>
+    <script src="/js/cocos2d/core/CCDirector.js"></script>
+    <script src="/js/cocos2d/core/CCCamera.js"></script>
+    <script src="/js/cocos2d/core/CCScheduler.js"></script>
+    <script src="/js/cocos2d/core/CCLoader.js"></script>
+
+    <script src="/js/cocos2d/core/CCDrawingPrimitives.js"></script>
+    <script src="/js/cocos2d/core/platform/CCApplication.js"></script>
+    <script src="/js/cocos2d/core/platform/CCSAXParser.js"></script>
+    <script src="/js/cocos2d/core/platform/AppControl.js"></script>
+    <script src="/js/cocos2d/core/labelTTF/CCLabelTTF.js"></script>
+
+    <script src="/js/cocos2d/core/CCActionManager.js"></script>
+    <script src="/js/cocos2d/kazmath/utility.js"></script>
+    <script src="/js/cocos2d/kazmath/vec2.js"></script>
+    <script src="/js/cocos2d/kazmath/vec3.js"></script>
+    <script src="/js/cocos2d/kazmath/vec4.js"></script>
+
+    <script src="/js/cocos2d/kazmath/ray2.js"></script>
+    <script src="/js/cocos2d/kazmath/mat3.js"></script>
+    <script src="/js/cocos2d/kazmath/mat4.js"></script>
+    <script src="/js/cocos2d/kazmath/plane.js"></script>
+    <script src="/js/cocos2d/kazmath/quaternion.js"></script>
+
+    <script src="/js/cocos2d/kazmath/aabb.js"></script>
+    <script src="/js/cocos2d/shaders/CCShaders.js"></script>
+    <script src="/js/cocos2d/shaders/CCShaderCache.js"></script>
+    <script src="/js/cocos2d/shaders/CCGLProgram.js"></script>
+    <script src="/js/cocos2d/shaders/CCGLStateCache.js"></script>
+
+    <script src="/js/cocos2d/render_texture/CCRenderTexture.js"></script>
+    <script src="/js/cocos2d/motion_streak/CCMotionStreak.js"></script>
+    <script src="/js/cocos2d/clipping_nodes/CCClippingNode.js"></script>
+    <script src="/js/cocos2d/effects/CCGrid.js"></script>
+    <script src="/js/cocos2d/effects/CCGrabber.js"></script>
+
+    <script src="/js/cocos2d/shape_nodes/CCDrawNode.js"></script>
+    <script src="/js/cocos2d/actions/CCAction.js"></script>
+    <script src="/js/cocos2d/actions/CCActionInterval.js"></script>
+    <script src="/js/cocos2d/actions/CCActionInstant.js"></script>
+    <script src="/js/cocos2d/actions/CCActionCamera.js"></script>
+
+    <script src="/js/cocos2d/actions/CCActionEase.js"></script>
+    <script src="/js/cocos2d/actions/CCActionCatmullRom.js"></script>
+    <script src="/js/cocos2d/actions/CCActionTween.js"></script>
+    <script src="/js/cocos2d/actions3d/CCActionGrid.js"></script>
+    <script src="/js/cocos2d/actions3d/CCActionGrid3D.js"></script>
+
+    <script src="/js/cocos2d/actions3d/CCActionTiledGrid.js"></script>
+    <script src="/js/cocos2d/actions3d/CCActionPageTurn3D.js"></script>
+    <script src="/js/cocos2d/progress_timer/CCProgressTimer.js"></script>
+    <script src="/js/cocos2d/progress_timer/CCActionProgressTimer.js"></script>
+    <script src="/js/cocos2d/transitions_nodes/CCTransition.js"></script>
+
+    <script src="/js/cocos2d/transitions_nodes/CCTransitionProgress.js"></script>
+    <script src="/js/cocos2d/transitions_nodes/CCTransitionPageTurn.js"></script>
+    <script src="/js/cocos2d/label_nodes/CCLabelAtlas.js"></script>
+    <script src="/js/cocos2d/label_nodes/CCLabelBMFont.js"></script>
+    <script src="/js/cocos2d/compress/ZipUtils.js"></script>
+
+    <script src="/js/cocos2d/compress/base64.js"></script>
+    <script src="/js/cocos2d/compress/gzip.js"></script>
+    <script src="/js/cocos2d/compress/zlib.min.js"></script>
+    <script src="/js/cocos2d/particle_nodes/CCFormatHelper.js"></script>
+    <script src="/js/cocos2d/particle_nodes/CCPNGReader.js"></script>
+
+    <script src="/js/cocos2d/particle_nodes/CCTIFFReader.js"></script>
+    <script src="/js/cocos2d/particle_nodes/CCParticleSystem.js"></script>
+    <script src="/js/cocos2d/particle_nodes/CCParticleExamples.js"></script>
+    <script src="/js/cocos2d/particle_nodes/CCParticleBatchNode.js"></script>
+    <script src="/js/cocos2d/touch_dispatcher/CCTouchDelegateProtocol.js"></script>
+
+    <script src="/js/cocos2d/touch_dispatcher/CCTouchHandler.js"></script>
+    <script src="/js/cocos2d/touch_dispatcher/CCTouchDispatcher.js"></script>
+    <script src="/js/cocos2d/touch_dispatcher/CCMouseDispatcher.js"></script>
+    <script src="/js/cocos2d/keyboard_dispatcher/CCKeyboardDelegate.js"></script>
+    <script src="/js/cocos2d/keyboard_dispatcher/CCKeyboardDispatcher.js"></script>
+
+    <script src="/js/cocos2d/accelerometer/CCAccelerometer.js"></script>
+    <script src="/js/cocos2d/text_input_node/CCIMEDispatcher.js"></script>
+    <script src="/js/cocos2d/text_input_node/CCTextFieldTTF.js"></script>
+    <script src="/js/cocos2d/menu_nodes/CCMenuItem.js"></script>
+    <script src="/js/cocos2d/menu_nodes/CCMenu.js"></script>
+
+    <script src="/js/cocos2d/tileMap_nodes/CCTGAlib.js"></script>
+    <script src="/js/cocos2d/tileMap_nodes/CCTMXTiledMap.js"></script>
+    <script src="/js/cocos2d/tileMap_nodes/CCTMXXMLParser.js"></script>
+    <script src="/js/cocos2d/tileMap_nodes/CCTMXObjectGroup.js"></script>
+    <script src="/js/cocos2d/tileMap_nodes/CCTMXLayer.js"></script>
+
+    <script src="/js/cocos2d/parallax_nodes/CCParallaxNode.js"></script>
+    <script src="/js/cocos2d/audio/SimpleAudioEngine.js"></script>
+    <script src="/js/cocos2d/CCUserDefault.js"></script>
+    <script src="/js/cocos2d/CCImage.js"></script>
+
+    <script src="/js/cocos2d/physics_nodes/CCPhysicsSprite.js"></script>
+    <script src="/js/cocos2d/physics_nodes/CCPhysicsDebugNode.js"></script>
+    <script src="/js/external/box2d/box2d.js"></script>
+
+    <script src="/js/resource.js"></script>
+    <script src="/js/initEngine.js"></script>
+    <script src="/js/MZB01/MZB01.js"></script>
+    <script src="/js/MZB01/gameOverScene.js"></script>
+    <script src="/js/MZH01/MZH01.js"></script>
+    <script src="/js/JZ02/JZ02.js"></script>
+    <script src="/js/JZ03/JZ03.js"></script>
+</body>
+</html>

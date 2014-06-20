@@ -1,0 +1,135 @@
+﻿.gameChoice{
+    height:100%;
+    width:100%;
+    background:url("../../images/frame/moduleJZBG.png") no-repeat;
+    background-size:1366px 768px;
+    background-position:center;
+}
+
+#gameLV {
+    display:block;
+    position:absolute;
+    top:57px;
+    left:85px;
+    width:155px;
+    height:89px;
+}
+
+#symbols {
+    display:block;
+    position:absolute;
+    top:164px;
+    left:28px;
+    width:334px;
+    height:482px;
+}
+
+
+/* moduleJZ */
+#JZ01 {
+    display:block;
+    position:absolute;
+    top:172px;
+    left:365px;
+    width:282px;
+    height:214px;
+}
+
+    .JZ01{        
+        background:url(../../images/frame/JZ01.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+    .JZ01:hover{
+        background:url(../../images/frame/JZ01Press.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+#JZ02 {
+    display:block;
+    position:absolute;
+    top:172px;
+    left:686px;
+    width:282px;
+    height:214px;
+}
+
+    .JZ02{
+        background:url(../../images/frame/JZ02.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+    .JZ02:hover{
+            background:url(../../images/frame/JZ02Press.png) no-repeat;
+            background-size:282px 214px;
+    }
+
+#JZ03 {
+    display:block;
+    position:absolute;
+    top:172px;
+    left:1007px;
+    width:282px;
+    height:214px;
+}
+    .JZ03{
+        background:url(../../images/frame/JZ03.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+    .JZ03:hover{
+        background:url(../../images/frame/JZ03Press.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+.MZB01{        
+        background:url(../../images/frame/MZB01.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+    .MZB01:hover{
+        background:url(../../images/frame/MZB01Press.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+.MZH01{        
+        background:url(../../images/frame/MZH01.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+    .MZH01:hover{
+        background:url(../../images/frame/MZH01Press.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+.lockGame{        
+        background:url(../../images/frame/gameLock.png) no-repeat;
+        background-size:282px 214px;
+    }
+
+.moduleJZDecoration {
+    display:block;
+    position:absolute;
+}
+
+#JZ01Deco {
+    width:63px;
+    height:73px;
+    top:105px;
+    left:400px;
+}
+
+#JZ02Deco {
+    width:61px;
+    height:62px;
+    top:115px;
+    left:790px;
+}
+
+#JZ03Deco {
+    width:68px;
+    height:79px;
+    top:110px;
+    left:1190px;
+}
+

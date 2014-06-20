@@ -1,0 +1,79 @@
+﻿.jobChoice{
+    height:100%;
+    width:100%;
+    background:url("../../images/frame/painterBG.png") no-repeat;
+    background-size:1366px 768px;
+    background-position:center;
+}
+
+#jobChoice {
+    position:absolute;
+    display:-ms-grid;
+    -ms-grid-columns:1fr 1fr 1fr 1fr;
+    -ms-grid-rows:1fr;
+    top:92px;
+    left:128px;
+    width:1163px;
+    height:377px;
+}
+
+.jobs {
+    width:287px;
+    height:376px;
+    background:url("../../images/frame/job.png") no-repeat;
+    background-size:287px 376px;
+    background-position:center;
+}
+
+.jobComplete:hover {
+    background:url("../../images/frame/jobPress.png") no-repeat;
+    background-size:287px 376px;
+}
+
+.jobImg {
+    width:170px;
+    height:192px;
+    position:relative;
+    left:60px;
+    top:50px;
+}
+
+.jobName {
+    font-size:30px;
+    color:#ee4b46;
+    font-family:myChinese;
+    font-weight:bold;
+    text-align:center;
+    position:relative;
+    top:60px;
+}
+
+.jobLV {
+    font-size:30px;
+    color:#ee4b46;
+    font-family:myChinese;
+    font-weight:bold;
+    text-align:center;
+    position:relative;
+    top:45px;
+}
+
+#job1 {
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+}
+
+#job2 {
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+}
+
+#job3 {
+    -ms-grid-column:3;
+    -ms-grid-row:1;
+}
+
+#job4 {
+    -ms-grid-column:4;
+    -ms-grid-row:1;
+}
